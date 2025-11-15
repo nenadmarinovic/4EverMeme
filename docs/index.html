@@ -890,7 +890,7 @@
       <div class="contract">
         <span>📄</span>
         <code>0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef</code>
-        <span class="verified">✓ Verified</span>
+        <span class="verified">✓ Similar Match</span>
       </div>
 
       <div class="social">
@@ -908,12 +908,40 @@
     </section>
 
     <section class="newsletter">
-      <h3>📧 Stay Updated!</h3>
-      <p>Join our newsletter for exclusive updates and giveaways</p>
-      <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-        <input type="email" placeholder="Enter your email" required id="emailInput">
-        <button type="submit" id="subscribeBtn">Subscribe</button>
-      </form>
+      <h3>🔒 Security & Trust</h3>
+      <p style="margin-bottom:30px">Your safety is our priority. 4EverMeme is transparent and secure.</p>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;text-align:left;max-width:900px;margin:0 auto">
+        <div style="background:rgba(0,217,255,0.1);border:1px solid rgba(0,217,255,0.3);border-radius:15px;padding:20px">
+          <div style="font-size:32px;margin-bottom:10px">✓</div>
+          <h4 style="font-size:18px;margin-bottom:10px;color:var(--accent)">Similar Match Verified</h4>
+          <p style="font-size:14px;color:var(--muted);margin:0">Contract bytecode matches verified contract on BscScan</p>
+        </div>
+        
+        <div style="background:rgba(0,217,255,0.1);border:1px solid rgba(0,217,255,0.3);border-radius:15px;padding:20px">
+          <div style="font-size:32px;margin-bottom:10px">🔍</div>
+          <h4 style="font-size:18px;margin-bottom:10px;color:var(--accent)">Transparent Code</h4>
+          <p style="font-size:14px;color:var(--muted);margin:0">Open source smart contract - no hidden functions</p>
+        </div>
+        
+        <div style="background:rgba(0,217,255,0.1);border:1px solid rgba(0,217,255,0.3);border-radius:15px;padding:20px">
+          <div style="font-size:32px;margin-bottom:10px">🛡️</div>
+          <h4 style="font-size:18px;margin-bottom:10px;color:var(--accent)">Community Safe</h4>
+          <p style="font-size:14px;color:var(--muted);margin:0">100% community owned - 0% tax - No rug pull</p>
+        </div>
+      </div>
+      
+      <div style="margin-top:30px;padding:20px;background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);border-radius:15px;max-width:700px;margin:30px auto 0">
+        <p style="font-size:14px;margin-bottom:15px;color:var(--text)">
+          <strong>🔗 Reference Contract:</strong>
+        </p>
+        <a href="https://bscscan.com/address/0xb175EE11731D1800977F074945fa327D1Fdf6148#code" target="_blank" style="color:var(--accent);text-decoration:none;font-family:monospace;font-size:13px;word-break:break-all">
+          0xb175EE11731D1800977F074945fa327D1Fdf6148
+        </a>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px;margin-bottom:0">
+          ✓ Bytecode Match Confirmed by BscScan
+        </p>
+      </div>
     </section>
 
     <div class="grid">
@@ -923,7 +951,7 @@
         <p>4EverMeme (4EVM) is a community-driven BEP-20 token on BNB Smart Chain focused on transparency and fun!</p>
         <ul>
           <li>No buy/sell tax - 100% community owned</li>
-          <li>Verified smart contract on BscScan</li>
+          <li>Similar Match verified on BscScan</li>
           <li>3 awesome games to play!</li>
           <li>Open-source on GitHub</li>
         </ul>
@@ -1113,14 +1141,27 @@
   <script>
     // Falling shooting stars
     const starsEl = document.getElementById('stars');
-    for(let i=0; i<80; i++) {
+    
+    function createStar() {
       const star = document.createElement('div');
       star.className = 'star';
       star.style.left = Math.random()*100+'%';
       star.style.top = '-10px';
-      star.style.animationDuration = (8 + Math.random()*8)+'s';
-      star.style.animationDelay = (Math.random()*5)+'s';
+      const duration = 8 + Math.random()*8;
+      star.style.animationDuration = duration+'s, 2s';
+      star.style.animationDelay = (Math.random()*5)+'s, 0s';
       starsEl.appendChild(star);
+      
+      // Remove and recreate after animation ends
+      setTimeout(() => {
+        star.remove();
+        createStar();
+      }, (duration + 5) * 1000);
+    }
+    
+    // Create initial stars
+    for(let i=0; i<80; i++) {
+      setTimeout(() => createStar(), i * 100);
     }
 
     // Theme
