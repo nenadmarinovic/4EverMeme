@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>4EverMeme (4EVM) 🚀 To The Moon!</title>
-  <meta name="description" content="4EverMeme - Play Moon Lander game and join the community!">
+  <meta name="description" content="4EverMeme - Community meme token on BSC with Tetris game!">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
@@ -30,7 +30,6 @@
       transition: all 0.3s;
     }
     
-    /* Banner */
     .banner {
       background: linear-gradient(90deg, #FFD700, #FFA500, #00D9FF);
       color: #000;
@@ -54,7 +53,6 @@
       cursor: pointer;
     }
     
-    /* Stars */
     .stars {
       position: fixed;
       top: 0;
@@ -79,20 +77,6 @@
       50% { opacity: 1; }
     }
     
-    .shooting-star {
-      position: absolute;
-      width: 100px;
-      height: 2px;
-      background: linear-gradient(90deg, #fff, transparent);
-      animation: shoot 3s linear;
-    }
-    
-    @keyframes shoot {
-      from { transform: translate(0, 0); opacity: 1; }
-      to { transform: translate(-300px, 300px); opacity: 0; }
-    }
-    
-    /* Content */
     .content {
       position: relative;
       z-index: 1;
@@ -101,7 +85,6 @@
       padding: 20px;
     }
     
-    /* Nav */
     nav {
       display: flex;
       justify-content: space-between;
@@ -140,6 +123,7 @@
     .nav-controls {
       display: flex;
       gap: 15px;
+      align-items: center;
     }
     
     .theme-btn, .game-btn {
@@ -171,7 +155,6 @@
       cursor: pointer;
     }
     
-    /* Hero */
     .hero {
       text-align: center;
       padding: 60px 20px;
@@ -219,7 +202,30 @@
       line-height: 1.6;
     }
     
-    /* Buttons */
+    .live-stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+    
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    
     .btns {
       display: flex;
       justify-content: center;
@@ -250,7 +256,6 @@
     
     .btn-primary:hover {
       transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 15px 50px rgba(255,215,0,0.6);
     }
     
     .btn-secondary {
@@ -264,7 +269,143 @@
       border-color: var(--accent);
     }
     
-    /* Game Modal */
+    .contract {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,215,0,0.3);
+      border-radius: 15px;
+      padding: 15px 25px;
+      margin: 20px 0;
+    }
+    
+    .contract code {
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    
+    .verified {
+      background: rgba(0,217,255,0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    
+    .social a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .social a:hover {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      transform: translateY(-5px) scale(1.1);
+    }
+    
+    .chart {
+      margin: 60px 0;
+      text-align: center;
+    }
+    
+    .chart h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .chart-box {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 25px;
+      padding: 20px;
+      height: 500px;
+    }
+    
+    .chart-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 15px;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+    
+    .card {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 25px;
+      padding: 30px;
+      transition: all 0.3s;
+    }
+    
+    .card:hover {
+      border-color: rgba(255,215,0,0.4);
+      transform: translateY(-5px);
+    }
+    
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), transparent);
+      margin: 15px 0;
+    }
+    
+    .card p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    
+    .card ul {
+      list-style: none;
+    }
+    
+    .card li {
+      padding: 10px 0 10px 25px;
+      position: relative;
+      color: var(--muted);
+    }
+    
+    .card li::before {
+      content: '🚀';
+      position: absolute;
+      left: 0;
+    }
+    
     .game-modal {
       display: none;
       position: fixed;
@@ -289,125 +430,57 @@
       border: 2px solid var(--primary);
       border-radius: 25px;
       padding: 30px;
-      max-width: 900px;
+      max-width: 600px;
       width: 100%;
-      max-height: 95vh;
-      overflow-y: auto;
-    }
-    
-    .game-header {
       text-align: center;
-      margin-bottom: 20px;
     }
     
-    .game-header h3 {
+    .game-container h3 {
       font-size: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       background: linear-gradient(135deg, var(--primary), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     
-    .game-stats {
-      display: flex;
-      justify-content: space-around;
-      margin: 20px 0;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    
-    .stat {
-      text-align: center;
-      background: rgba(255,215,0,0.1);
-      border: 1px solid rgba(255,215,0,0.3);
-      border-radius: 15px;
-      padding: 10px 20px;
-      min-width: 100px;
-    }
-    
-    .stat-label {
-      font-size: 11px;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-    
-    .stat-value {
-      font-size: 24px;
-      font-weight: 900;
-      color: var(--primary);
-    }
-    
-    #gameCanvas {
-      border: 3px solid rgba(255,215,0,0.5);
+    #tetrisCanvas {
+      border: 3px solid var(--primary);
       border-radius: 15px;
       background: #000;
       display: block;
       margin: 20px auto;
-      max-width: 100%;
     }
     
-    .fuel-bar {
-      width: 100%;
-      height: 30px;
-      background: rgba(0,0,0,0.5);
-      border: 2px solid rgba(255,215,0,0.3);
-      border-radius: 15px;
-      overflow: hidden;
+    .game-score {
+      font-size: 24px;
+      color: var(--primary);
       margin: 15px 0;
-      position: relative;
+      font-weight: 900;
     }
     
-    .fuel-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #4ade80, #22c55e);
-      transition: width 0.3s, background 0.3s;
-      border-radius: 13px;
-    }
-    
-    .fuel-fill.low {
-      background: linear-gradient(90deg, #ef4444, #dc2626);
-      animation: blink 0.5s infinite;
-    }
-    
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-    
-    .fuel-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-weight: 700;
-      font-size: 14px;
-      text-shadow: 0 0 5px #000;
-    }
-    
-    .controls {
+    .game-controls {
       display: flex;
       gap: 10px;
       justify-content: center;
-      margin: 20px 0;
       flex-wrap: wrap;
+      margin: 20px 0;
     }
     
-    .game-instructions {
+    .instructions {
       background: rgba(0,217,255,0.1);
       border: 1px solid rgba(0,217,255,0.3);
       border-radius: 15px;
       padding: 20px;
       margin: 20px 0;
+      text-align: left;
     }
     
-    .game-instructions h4 {
-      font-size: 18px;
-      margin-bottom: 15px;
+    .instructions h4 {
       color: var(--accent);
+      margin-bottom: 15px;
     }
     
-    .instruction-tabs {
+    .lang-tabs {
       display: flex;
       gap: 10px;
       margin-bottom: 15px;
@@ -438,11 +511,11 @@
       display: block;
     }
     
-    .instruction-list {
+    .inst-list {
       list-style: none;
     }
     
-    .instruction-list li {
+    .inst-list li {
       padding: 8px 0;
       padding-left: 25px;
       position: relative;
@@ -450,47 +523,12 @@
       line-height: 1.6;
     }
     
-    .instruction-list li::before {
-      content: '🚀';
+    .inst-list li::before {
+      content: '🎮';
       position: absolute;
       left: 0;
     }
     
-    .leaderboard {
-      background: rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,215,0,0.3);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px 0;
-    }
-    
-    .leaderboard h4 {
-      font-size: 18px;
-      margin-bottom: 15px;
-      color: var(--primary);
-      text-align: center;
-    }
-    
-    .leaderboard-list {
-      list-style: none;
-    }
-    
-    .leaderboard-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      margin: 5px 0;
-      background: rgba(255,255,255,0.02);
-      border-radius: 8px;
-      border-left: 3px solid var(--primary);
-    }
-    
-    .leaderboard-item.top {
-      background: rgba(255,215,0,0.1);
-      border-left-color: var(--primary);
-    }
-    
-    /* Footer */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -498,18 +536,24 @@
       border-top: 1px solid rgba(255,255,255,0.1);
     }
     
-    /* Responsive */
+    footer p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    
     @media (max-width: 768px) {
       h2 { font-size: 48px; }
-      .game-container { padding: 20px; }
-      #gameCanvas { width: 100%; height: auto; }
+      .grid { grid-template-columns: 1fr; }
+      .chart-box { height: 400px; }
+      #tetrisCanvas { width: 250px; height: 500px; }
     }
   </style>
 </head>
 <body>
   <!-- Banner -->
   <div class="banner" id="banner">
-    🎮 <strong>NEW GAME!</strong> Play Moon Lander • Win Prizes • Compete on Leaderboard! 
+    🎮 <strong>NEW!</strong> Play TETRIS game • Compete on leaderboard • Win prizes! 
     <button onclick="document.getElementById('banner').style.display='none'">×</button>
   </div>
 
@@ -521,16 +565,16 @@
     <!-- Nav -->
     <nav>
       <div class="logo-section">
-        <img src="https://i.postimg.cc/5y0H78jp/09DF90F9-3A8B-49B3-8A87-C2FFFF78C819.png" class="logo" id="logo">
+        <img src="https://i.postimg.cc/5y0H78jp/09DF90F9-3A8B-49B3-8A87-C2FFFF78C819.png" class="logo">
         <div class="brand">
           <h1>4EVERMEME</h1>
           <p style="font-size:12px;color:var(--muted);letter-spacing:2px">TO THE MOON!</p>
         </div>
       </div>
       <div class="nav-controls">
-        <button class="game-btn" onclick="openGame()" title="Play Game">🎮</button>
+        <button class="game-btn" onclick="openGame()" title="Play Tetris">🎮</button>
         <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
-        <select id="lang" onchange="changeLanguage(this.value)">
+        <select id="langSelect">
           <option value="en">🇬🇧 EN</option>
           <option value="it">🇮🇹 IT</option>
           <option value="cn">🇨🇳 CN</option>
@@ -544,164 +588,195 @@
     <section class="hero">
       <div class="badge">⛓️ BNB SMART CHAIN • BEP-20</div>
       <h2>4EVERMEME (4EVM)</h2>
-      <p class="subtitle" id="subtitle">
-        Where meme culture meets transparent blockchain — Play games, earn rewards, and join the community! 🚀
+      <p class="subtitle">
+        Where meme culture meets transparent blockchain — Play games, earn rewards, join the community! 🚀
       </p>
+
+      <div class="live-stats">
+        <div class="stat">
+          <div class="stat-value">1B</div>
+          <div class="stat-label">Supply</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Community</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0%</div>
+          <div class="stat-label">Tax</div>
+        </div>
+      </div>
 
       <div class="btns">
         <button class="btn btn-primary" onclick="openGame()">
-          🎮 <span id="playBtn">PLAY MOON LANDER</span>
+          🎮 PLAY TETRIS
         </button>
-        <a href="https://pancakeswap.finance/swap?outputCurrency=0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef&chain=bsc" class="btn btn-secondary">
-          🥞 <span id="buyBtn">Buy on PancakeSwap</span>
+        <a href="https://pancakeswap.finance/swap?outputCurrency=0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef&chain=bsc" class="btn btn-secondary" target="_blank">
+          🥞 Buy on PancakeSwap
         </a>
+        <a href="https://bscscan.com/token/0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef" class="btn btn-secondary" target="_blank">
+          🔍 View on BscScan
+        </a>
+        <button class="btn btn-secondary" onclick="copyContract()">
+          📋 Copy Contract
+        </button>
+      </div>
+
+      <div class="contract">
+        <span>📄</span>
+        <code>0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef</code>
+        <span class="verified">✓ Verified</span>
+      </div>
+
+      <div class="social">
+        <a href="https://t.me/4evermeme" target="_blank">📱</a>
+        <a href="https://x.com/4evermeme" target="_blank">🐦</a>
+        <a href="https://github.com/nedja80/4EverMeme" target="_blank">💻</a>
       </div>
     </section>
+
+    <!-- Chart -->
+    <section class="chart">
+      <h3>📈 Live Chart</h3>
+      <div class="chart-box">
+        <iframe src="https://dexscreener.com/bsc/0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef?embed=1&theme=dark"></iframe>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <div class="grid">
+      <div class="card">
+        <h3>📖 About</h3>
+        <div class="divider"></div>
+        <p>4EverMeme (4EVM) is a community-driven BEP-20 token on BNB Smart Chain focused on transparency, creativity, and fun!</p>
+        <ul>
+          <li>No buy/sell tax - 100% community owned</li>
+          <li>Verified smart contract on BscScan</li>
+          <li>Play-to-earn Tetris game</li>
+          <li>Open-source on GitHub</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>📊 Token Info</h3>
+        <div class="divider"></div>
+        <table style="width:100%">
+          <tr><td style="color:var(--muted);padding:10px 0">Name</td><td style="text-align:right;font-weight:600;color:var(--primary)">4EverMeme</td></tr>
+          <tr><td style="color:var(--muted);padding:10px 0">Symbol</td><td style="text-align:right;font-weight:600;color:var(--primary)">4EVM</td></tr>
+          <tr><td style="color:var(--muted);padding:10px 0">Decimals</td><td style="text-align:right;font-weight:600;color:var(--primary)">18</td></tr>
+          <tr><td style="color:var(--muted);padding:10px 0">Supply</td><td style="text-align:right;font-weight:600;color:var(--primary)">1,000,000,000</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>🗺️ Roadmap</h3>
+        <div class="divider"></div>
+        <ul>
+          <li>✅ Token launch & verification</li>
+          <li>✅ Community building</li>
+          <li>🔄 Tetris game launch</li>
+          <li>📱 Marketing campaign</li>
+          <li>🎁 Play-to-earn rewards</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🛒 How to Buy</h3>
+        <div class="divider"></div>
+        <ul>
+          <li>Connect wallet to BSC network</li>
+          <li>Go to PancakeSwap</li>
+          <li>Paste contract address</li>
+          <li>Swap BNB for 4EVM! 💎</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <!-- Game Modal -->
   <div class="game-modal" id="gameModal">
     <div class="game-container">
-      <div class="game-header">
-        <h3>🚀 MOON LANDER GAME</h3>
-        <p style="color:var(--muted)" id="gameDesc">Land your rocket safely on the platform!</p>
+      <h3>🎮 4EVM TETRIS</h3>
+      <p style="color:var(--muted)">Classic Tetris - Stack blocks and clear lines!</p>
+      
+      <div class="game-score">
+        Score: <span id="score">0</span> | Lines: <span id="lines">0</span>
+      </div>
+      
+      <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+      
+      <div class="game-controls">
+        <button class="btn btn-primary" onclick="startGame()">START</button>
+        <button class="btn btn-secondary" onclick="pauseGame()">PAUSE</button>
+        <button class="btn btn-secondary" onclick="closeGame()">CLOSE</button>
       </div>
 
-      <!-- Game Stats -->
-      <div class="game-stats">
-        <div class="stat">
-          <div class="stat-label" id="scoreLabel">SCORE</div>
-          <div class="stat-value" id="score">0</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label" id="levelLabel">LEVEL</div>
-          <div class="stat-value" id="level">1</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label" id="bestLabel">BEST</div>
-          <div class="stat-value" id="best">0</div>
-        </div>
-      </div>
-
-      <!-- Fuel Bar -->
-      <div class="fuel-bar">
-        <div class="fuel-fill" id="fuelFill" style="width:100%"></div>
-        <div class="fuel-text" id="fuelText">FUEL: 100%</div>
-      </div>
-
-      <!-- Canvas -->
-      <canvas id="gameCanvas" width="600" height="500"></canvas>
-
-      <!-- Controls -->
-      <div class="controls">
-        <button class="btn btn-primary" onclick="startGame()" id="startBtn">START GAME</button>
-        <button class="btn btn-secondary" onclick="resetGame()" id="resetBtn">RESET</button>
-        <button class="btn btn-secondary" onclick="closeGame()" id="closeBtn">CLOSE</button>
-      </div>
-
-      <!-- Instructions -->
-      <div class="game-instructions">
-        <h4 id="howToPlayTitle">📖 HOW TO PLAY</h4>
-        <div class="instruction-tabs">
-          <div class="tab active" onclick="switchTab('en')">🇬🇧 English</div>
-          <div class="tab" onclick="switchTab('it')">🇮🇹 Italiano</div>
-          <div class="tab" onclick="switchTab('cn')">🇨🇳 中文</div>
-          <div class="tab" onclick="switchTab('es')">🇪🇸 Español</div>
-          <div class="tab" onclick="switchTab('fr')">🇫🇷 Français</div>
+      <div class="instructions">
+        <h4>📖 How to Play</h4>
+        <div class="lang-tabs">
+          <div class="tab active" onclick="switchInst('en')">🇬🇧 EN</div>
+          <div class="tab" onclick="switchInst('it')">🇮🇹 IT</div>
+          <div class="tab" onclick="switchInst('cn')">🇨🇳 CN</div>
+          <div class="tab" onclick="switchInst('es')">🇪🇸 ES</div>
+          <div class="tab" onclick="switchInst('fr')">🇫🇷 FR</div>
         </div>
 
-        <!-- English -->
         <div class="tab-content active" id="inst-en">
-          <ul class="instruction-list">
-            <li><strong>← →</strong> Arrow keys to move left/right</li>
-            <li><strong>↑</strong> Arrow up to boost (uses fuel)</li>
-            <li>Land on the <strong>golden platform</strong></li>
-            <li>Keep vertical speed <strong>below 3</strong> for safe landing</li>
-            <li>Watch your fuel! Don't run out!</li>
-            <li>Each successful landing = <strong>+100 points</strong></li>
-            <li>Unlock new levels by reaching score milestones</li>
+          <ul class="inst-list">
+            <li><strong>←→</strong> Move left/right</li>
+            <li><strong>↑</strong> Rotate block</li>
+            <li><strong>↓</strong> Drop faster</li>
+            <li><strong>Space</strong> Hard drop</li>
+            <li>Clear lines to score!</li>
           </ul>
         </div>
 
-        <!-- Italian -->
         <div class="tab-content" id="inst-it">
-          <ul class="instruction-list">
-            <li><strong>← →</strong> Frecce per muovere sinistra/destra</li>
-            <li><strong>↑</strong> Freccia su per spinta (usa carburante)</li>
-            <li>Atterra sulla <strong>piattaforma dorata</strong></li>
-            <li>Mantieni velocità verticale <strong>sotto 3</strong> per atterraggio sicuro</li>
-            <li>Controlla il carburante! Non finirlo!</li>
-            <li>Ogni atterraggio riuscito = <strong>+100 punti</strong></li>
-            <li>Sblocca nuovi livelli raggiungendo punteggi traguardo</li>
+          <ul class="inst-list">
+            <li><strong>←→</strong> Muovi sinistra/destra</li>
+            <li><strong>↑</strong> Ruota blocco</li>
+            <li><strong>↓</strong> Scendi più veloce</li>
+            <li><strong>Spazio</strong> Caduta rapida</li>
+            <li>Elimina linee per punti!</li>
           </ul>
         </div>
 
-        <!-- Chinese -->
         <div class="tab-content" id="inst-cn">
-          <ul class="instruction-list">
-            <li><strong>← →</strong> 箭头键左右移动</li>
-            <li><strong>↑</strong> 向上箭头加速（消耗燃料）</li>
-            <li>降落在<strong>金色平台</strong>上</li>
-            <li>保持垂直速度<strong>低于3</strong>以安全着陆</li>
-            <li>注意燃料！不要用完！</li>
-            <li>每次成功着陆 = <strong>+100分</strong></li>
-            <li>达到分数里程碑解锁新关卡</li>
+          <ul class="inst-list">
+            <li><strong>←→</strong> 左右移动</li>
+            <li><strong>↑</strong> 旋转方块</li>
+            <li><strong>↓</strong> 加速下落</li>
+            <li><strong>空格</strong> 快速下落</li>
+            <li>消除行得分！</li>
           </ul>
         </div>
 
-        <!-- Spanish -->
         <div class="tab-content" id="inst-es">
-          <ul class="instruction-list">
-            <li><strong>← →</strong> Flechas para mover izquierda/derecha</li>
-            <li><strong>↑</strong> Flecha arriba para impulsar (usa combustible)</li>
-            <li>Aterriza en la <strong>plataforma dorada</strong></li>
-            <li>Mantén velocidad vertical <strong>por debajo de 3</strong> para aterrizaje seguro</li>
-            <li>¡Vigila tu combustible! ¡No te quedes sin él!</li>
-            <li>Cada aterrizaje exitoso = <strong>+100 puntos</strong></li>
-            <li>Desbloquea nuevos niveles alcanzando hitos de puntuación</li>
+          <ul class="inst-list">
+            <li><strong>←→</strong> Mover izquierda/derecha</li>
+            <li><strong>↑</strong> Rotar bloque</li>
+            <li><strong>↓</strong> Caer más rápido</li>
+            <li><strong>Espacio</strong> Caída rápida</li>
+            <li>¡Elimina líneas para puntuar!</li>
           </ul>
         </div>
 
-        <!-- French -->
         <div class="tab-content" id="inst-fr">
-          <ul class="instruction-list">
-            <li><strong>← →</strong> Flèches pour bouger gauche/droite</li>
-            <li><strong>↑</strong> Flèche haut pour propulsion (utilise du carburant)</li>
-            <li>Atterris sur la <strong>plateforme dorée</strong></li>
-            <li>Garde la vitesse verticale <strong>en dessous de 3</strong> pour un atterrissage sûr</li>
-            <li>Surveille ton carburant! Ne le gaspille pas!</li>
-            <li>Chaque atterrissage réussi = <strong>+100 points</strong></li>
-            <li>Débloque de nouveaux niveaux en atteignant les jalons de score</li>
+          <ul class="inst-list">
+            <li><strong>←→</strong> Bouger gauche/droite</li>
+            <li><strong>↑</strong> Tourner le bloc</li>
+            <li><strong>↓</strong> Tomber plus vite</li>
+            <li><strong>Espace</strong> Chute rapide</li>
+            <li>Effacer des lignes pour marquer!</li>
           </ul>
         </div>
-      </div>
-
-      <!-- Leaderboard -->
-      <div class="leaderboard">
-        <h4 id="leaderTitle">🏆 LEADERBOARD</h4>
-        <ul class="leaderboard-list" id="leaderboardList">
-          <li class="leaderboard-item top">
-            <span>1. 🥇 Diamond Hands</span>
-            <span style="color:var(--primary);font-weight:700">1250</span>
-          </li>
-          <li class="leaderboard-item">
-            <span>2. 🥈 Moon Walker</span>
-            <span style="color:var(--muted);font-weight:700">980</span>
-          </li>
-          <li class="leaderboard-item">
-            <span>3. 🥉 Hodler Pro</span>
-            <span style="color:var(--muted);font-weight:700">750</span>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p style="color:var(--muted);font-size:13px">
-      ⚠️ Community-driven project. Always DYOR!
-    </p>
+    <p>⚠️ Community-driven project. Always DYOR!</p>
     <p style="margin-top:20px;font-size:11px">© 2024 4EverMeme • Made with ❤️</p>
   </footer>
 
@@ -716,15 +791,6 @@
       star.style.animationDelay = Math.random()*3+'s';
       starsEl.appendChild(star);
     }
-    
-    setInterval(() => {
-      const s = document.createElement('div');
-      s.className = 'shooting-star';
-      s.style.left = Math.random()*100+'%';
-      s.style.top = Math.random()*50+'%';
-      starsEl.appendChild(s);
-      setTimeout(() => s.remove(), 3000);
-    }, 3000);
 
     // Theme
     let theme = 'dark';
@@ -739,340 +805,245 @@
       }
     }
 
-    // Tab switching
-    function switchTab(lang) {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    // Copy contract
+    function copyContract() {
+      navigator.clipboard.writeText('0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef');
+      alert('✓ Contract copied!');
+    }
+
+    // Instructions tabs
+    function switchInst(lang) {
+      document.querySelectorAll('.lang-tabs .tab').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       event.target.classList.add('active');
       document.getElementById('inst-'+lang).classList.add('active');
     }
 
-    // Game variables
-    let gameRunning = false;
+    // TETRIS GAME
+    const canvas = document.getElementById('tetrisCanvas');
+    const ctx = canvas.getContext('2d');
+    const COLS = 10;
+    const ROWS = 20;
+    const BLOCK_SIZE = 30;
+    
+    let board = [];
     let score = 0;
-    let level = 1;
-    let bestScore = parseInt(localStorage.getItem('moonLanderBest') || '0');
-    let rocket = {x: 300, y: 50, vx: 0, vy: 0, fuel: 100, rotation: 0};
-    let platform = {x: 250, y: 470, w: 100, h: 10};
-    let particles = [];
-    let canvas, ctx;
-
-    document.getElementById('best').textContent = bestScore;
-
+    let lines = 0;
+    let currentPiece = null;
+    let gameRunning = false;
+    let gameInterval = null;
+    
+    const SHAPES = [
+      [[1,1,1,1]], // I
+      [[1,1],[1,1]], // O
+      [[0,1,0],[1,1,1]], // T
+      [[1,0,0],[1,1,1]], // L
+      [[0,0,1],[1,1,1]], // J
+      [[0,1,1],[1,1,0]], // S
+      [[1,1,0],[0,1,1]]  // Z
+    ];
+    
+    const COLORS = ['#00D9FF','#FFD700','#FF6B9D','#4ADE80','#F97316','#A78BFA','#FB923C'];
+    
     function openGame() {
       document.getElementById('gameModal').classList.add('active');
-      if(!canvas) {
-        canvas = document.getElementById('gameCanvas');
-        ctx = canvas.getContext('2d');
-      }
+      initBoard();
+      draw();
     }
-
+    
     function closeGame() {
       document.getElementById('gameModal').classList.remove('active');
       gameRunning = false;
+      if(gameInterval) clearInterval(gameInterval);
     }
-
-    function resetGame() {
-      rocket = {x: 300, y: 50, vx: 0, vy: 0, fuel: 100, rotation: 0};
+    
+    function initBoard() {
+      board = Array(ROWS).fill(null).map(() => Array(COLS).fill(0));
       score = 0;
-      level = 1;
-      particles = [];
-      updateUI();
+      lines = 0;
+      updateScore();
     }
-
+    
     function startGame() {
       if(gameRunning) return;
       gameRunning = true;
-      resetGame();
-      gameLoop();
+      initBoard();
+      spawnPiece();
+      if(gameInterval) clearInterval(gameInterval);
+      gameInterval = setInterval(gameLoop, 500);
     }
-
-    function updateUI() {
-      document.getElementById('score').textContent = score;
-      document.getElementById('level').textContent = level;
-      
-      const fuelPercent = Math.max(0, rocket.fuel);
-      document.getElementById('fuelFill').style.width = fuelPercent + '%';
-      document.getElementById('fuelText').textContent = 'FUEL: ' + Math.round(fuelPercent) + '%';
-      
-      const fuelFill = document.getElementById('fuelFill');
-      if(fuelPercent < 30) {
-        fuelFill.classList.add('low');
-      } else {
-        fuelFill.classList.remove('low');
-      }
+    
+    function pauseGame() {
+      gameRunning = false;
+      if(gameInterval) clearInterval(gameInterval);
     }
-
-    function gameLoop() {
-      if(!gameRunning) return;
-      
-      // Physics (SLOWER, MORE CONTROLLABLE)
-      rocket.vy += 0.05; // Reduced gravity
-      rocket.x += rocket.vx;
-      rocket.y += rocket.vy;
-      
-      // Friction
-      rocket.vx *= 0.98;
-      
-      // Rotation based on horizontal velocity
-      rocket.rotation = rocket.vx * 2;
-      
-      // Update particles
-      particles.forEach((p, i) => {
-        p.y += p.vy;
-        p.x += p.vx;
-        p.life--;
-        if(p.life <= 0) particles.splice(i, 1);
-      });
-      
-      // Clear canvas
+    
+    function spawnPiece() {
+      const shapeIndex = Math.floor(Math.random() * SHAPES.length);
+      currentPiece = {
+        shape: SHAPES[shapeIndex],
+        color: COLORS[shapeIndex],
+        x: Math.floor(COLS / 2) - 1,
+        y: 0
+      };
+    }
+    
+    function draw() {
       ctx.fillStyle = '#000';
-      ctx.fillRect(0, 0, 600, 500);
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
       
-      // Draw stars
-      ctx.fillStyle = '#fff';
-      for(let i=0; i<50; i++) {
-        const x = (i * 37) % 600;
-        const y = (i * 53) % 500;
-        ctx.fillRect(x, y, 2, 2);
-      }
-      
-      // Draw platform
-      ctx.fillStyle = '#FFD700';
-      ctx.fillRect(platform.x, platform.y, platform.w, platform.h);
-      ctx.fillStyle = '#FFA500';
-      ctx.fillRect(platform.x, platform.y, platform.w, 3);
-      
-      // Draw particles
-      ctx.fillStyle = '#FFA500';
-      particles.forEach(p => {
-        ctx.globalAlpha = p.life / 20;
-        ctx.fillRect(p.x, p.y, 3, 3);
-      });
-      ctx.globalAlpha = 1;
-      
-      // Draw rocket
-      ctx.save();
-      ctx.translate(rocket.x, rocket.y);
-      ctx.rotate(rocket.rotation * Math.PI / 180);
-      
-      // Rocket body
-      ctx.fillStyle = '#fff';
-      ctx.fillRect(-10, -20, 20, 40);
-      
-      // Rocket window
-      ctx.fillStyle = '#00D9FF';
-      ctx.fillRect(-5, -10, 10, 10);
-      
-      // Rocket flame (when boosting)
-      if(keys.up && rocket.fuel > 0) {
-        ctx.fillStyle = '#FFA500';
-        ctx.beginPath();
-        ctx.moveTo(-5, 20);
-        ctx.lineTo(0, 30 + Math.random() * 10);
-        ctx.lineTo(5, 20);
-        ctx.fill();
-      }
-      
-      ctx.restore();
-      
-      // Draw speed indicator
-      ctx.fillStyle = '#00D9FF';
-      ctx.font = '14px monospace';
-      ctx.fillText('Speed: ' + Math.abs(rocket.vy).toFixed(2), 10, 30);
-      ctx.fillText('Alt: ' + Math.round(platform.y - rocket.y), 10, 50);
-      
-      // Check landing
-      if(rocket.y >= platform.y - 20 && 
-         rocket.x > platform.x && 
-         rocket.x < platform.x + platform.w) {
-        if(Math.abs(rocket.vy) < 3 && Math.abs(rocket.vx) < 2) {
-          // SUCCESS!
-          score += 100;
-          level++;
-          
-          if(score > bestScore) {
-            bestScore = score;
-            localStorage.setItem('moonLanderBest', bestScore);
-            document.getElementById('best').textContent = bestScore;
+      // Draw board
+      for(let y=0; y<ROWS; y++) {
+        for(let x=0; x<COLS; x++) {
+          if(board[y][x]) {
+            ctx.fillStyle = board[y][x];
+            ctx.fillRect(x * BLOCK_SIZE, y * BLOCK_SIZE, BLOCK_SIZE-1, BLOCK_SIZE-1);
           }
-          
-          // Create success particles
-          for(let i=0; i<20; i++) {
-            particles.push({
-              x: rocket.x,
-              y: rocket.y,
-              vx: (Math.random() - 0.5) * 5,
-              vy: (Math.random() - 0.5) * 5,
-              life: 30
-            });
-          }
-          
-          // Reset rocket position
-          rocket = {
-            x: Math.random() * 400 + 100,
-            y: 50,
-            vx: (Math.random() - 0.5) * 2,
-            vy: 0,
-            fuel: 100,
-            rotation: 0
-          };
-          
-          // Move platform
-          platform.x = Math.random() * 400 + 50;
-          platform.w = Math.max(60, 120 - level * 5);
-          
-        } else {
-          // CRASH!
-          gameRunning = false;
-          alert('💥 CRASH! Too fast! Try again!\nScore: ' + score);
-          updateUI();
-          return;
         }
       }
       
-      // Check boundaries
-      if(rocket.y > 520 || rocket.x < 0 || rocket.x > 600) {
-        gameRunning = false;
-        alert('💥 Out of bounds!\nScore: ' + score);
-        updateUI();
-        return;
+      // Draw current piece
+      if(currentPiece) {
+        ctx.fillStyle = currentPiece.color;
+        currentPiece.shape.forEach((row, dy) => {
+          row.forEach((value, dx) => {
+            if(value) {
+              ctx.fillRect(
+                (currentPiece.x + dx) * BLOCK_SIZE,
+                (currentPiece.y + dy) * BLOCK_SIZE,
+                BLOCK_SIZE-1,
+                BLOCK_SIZE-1
+              );
+            }
+          });
+        });
       }
       
-      // Check fuel
-      if(rocket.fuel <= 0 && rocket.y < platform.y - 50) {
-        gameRunning = false;
-        alert('⛽ Out of fuel!\nScore: ' + score);
-        updateUI();
-        return;
+      // Grid
+      ctx.strokeStyle = '#222';
+      for(let i=0; i<=COLS; i++) {
+        ctx.beginPath();
+        ctx.moveTo(i * BLOCK_SIZE, 0);
+        ctx.lineTo(i * BLOCK_SIZE, canvas.height);
+        ctx.stroke();
       }
-      
-      updateUI();
-      requestAnimationFrame(gameLoop);
+      for(let i=0; i<=ROWS; i++) {
+        ctx.beginPath();
+        ctx.moveTo(0, i * BLOCK_SIZE);
+        ctx.lineTo(canvas.width, i * BLOCK_SIZE);
+        ctx.stroke();
+      }
     }
-
-    // Controls
-    const keys = {left: false, right: false, up: false};
     
+    function gameLoop() {
+      if(!gameRunning) return;
+      if(!movePiece(0, 1)) {
+        lockPiece();
+        clearLines();
+        spawnPiece();
+        if(checkCollision(0, 0)) {
+          gameRunning = false;
+          clearInterval(gameInterval);
+          alert('Game Over! Score: ' + score);
+        }
+      }
+      draw();
+    }
+    
+    function movePiece(dx, dy) {
+      currentPiece.x += dx;
+      currentPiece.y += dy;
+      if(checkCollision(0, 0)) {
+        currentPiece.x -= dx;
+        currentPiece.y -= dy;
+        return false;
+      }
+      return true;
+    }
+    
+    function rotatePiece() {
+      const rotated = currentPiece.shape[0].map((_, i) =>
+        currentPiece.shape.map(row => row[i]).reverse()
+      );
+      const prev = currentPiece.shape;
+      currentPiece.shape = rotated;
+      if(checkCollision(0, 0)) {
+        currentPiece.shape = prev;
+      }
+    }
+    
+    function checkCollision(dx, dy) {
+      return currentPiece.shape.some((row, y) =>
+        row.some((value, x) => {
+          if(!value) return false;
+          const newX = currentPiece.x + x + dx;
+          const newY = currentPiece.y + y + dy;
+          return newX < 0 || newX >= COLS || newY >= ROWS ||
+                 (newY >= 0 && board[newY][newX]);
+        })
+      );
+    }
+    
+    function lockPiece() {
+      currentPiece.shape.forEach((row, y) => {
+        row.forEach((value, x) => {
+          if(value) {
+            const boardY = currentPiece.y + y;
+            const boardX = currentPiece.x + x;
+            if(boardY >= 0 && boardY < ROWS && boardX >= 0 && boardX < COLS) {
+              board[boardY][boardX] = currentPiece.color;
+            }
+          }
+        });
+      });
+    }
+    
+    function clearLines() {
+      let linesCleared = 0;
+      for(let y = ROWS - 1; y >= 0; y--) {
+        if(board[y].every(cell => cell !== 0)) {
+          board.splice(y, 1);
+          board.unshift(Array(COLS).fill(0));
+          linesCleared++;
+          y++;
+        }
+      }
+      if(linesCleared > 0) {
+        lines += linesCleared;
+        score += linesCleared * 100 * linesCleared;
+        updateScore();
+      }
+    }
+    
+    function updateScore() {
+      document.getElementById('score').textContent = score;
+      document.getElementById('lines').textContent = lines;
+    }
+    
+    // Controls
     document.addEventListener('keydown', (e) => {
       if(!gameRunning) return;
       if(e.key === 'ArrowLeft') {
-        keys.left = true;
-        rocket.vx -= 0.15; // Reduced speed
+        movePiece(-1, 0);
+        draw();
       }
       if(e.key === 'ArrowRight') {
-        keys.right = true;
-        rocket.vx += 0.15; // Reduced speed
+        movePiece(1, 0);
+        draw();
       }
-      if(e.key === 'ArrowUp' && rocket.fuel > 0) {
-        keys.up = true;
-        rocket.vy -= 0.2; // Reduced thrust
-        rocket.fuel -= 0.5; // Slower fuel consumption
-        
-        // Add thrust particles
-        particles.push({
-          x: rocket.x + (Math.random() - 0.5) * 10,
-          y: rocket.y + 20,
-          vx: (Math.random() - 0.5) * 2,
-          vy: Math.random() * 3 + 2,
-          life: 20
-        });
+      if(e.key === 'ArrowDown') {
+        movePiece(0, 1);
+        draw();
+      }
+      if(e.key === 'ArrowUp') {
+        rotatePiece();
+        draw();
+      }
+      if(e.key === ' ') {
+        while(movePiece(0, 1)) {}
+        draw();
       }
     });
-
-    document.addEventListener('keyup', (e) => {
-      if(e.key === 'ArrowLeft') keys.left = false;
-      if(e.key === 'ArrowRight') keys.right = false;
-      if(e.key === 'ArrowUp') keys.up = false;
-    });
-
-    // Translations
-    const translations = {
-      en: {
-        subtitle: 'Where meme culture meets transparent blockchain — Play games, earn rewards, and join the community! 🚀',
-        playBtn: 'PLAY MOON LANDER',
-        buyBtn: 'Buy on PancakeSwap',
-        gameDesc: 'Land your rocket safely on the platform!',
-        scoreLabel: 'SCORE',
-        levelLabel: 'LEVEL',
-        bestLabel: 'BEST',
-        howToPlayTitle: '📖 HOW TO PLAY',
-        leaderTitle: '🏆 LEADERBOARD',
-        startBtn: 'START GAME',
-        resetBtn: 'RESET',
-        closeBtn: 'CLOSE'
-      },
-      it: {
-        subtitle: 'Dove la cultura meme incontra la blockchain trasparente — Gioca, guadagna premi e unisciti alla community! 🚀',
-        playBtn: 'GIOCA A MOON LANDER',
-        buyBtn: 'Compra su PancakeSwap',
-        gameDesc: 'Fai atterrare il tuo razzo in sicurezza sulla piattaforma!',
-        scoreLabel: 'PUNTEGGIO',
-        levelLabel: 'LIVELLO',
-        bestLabel: 'MIGLIORE',
-        howToPlayTitle: '📖 COME GIOCARE',
-        leaderTitle: '🏆 CLASSIFICA',
-        startBtn: 'INIZIA GIOCO',
-        resetBtn: 'RESET',
-        closeBtn: 'CHIUDI'
-      },
-      cn: {
-        subtitle: '模因文化与透明区块链相遇 — 玩游戏，赚取奖励，加入社区！🚀',
-        playBtn: '玩月球着陆器',
-        buyBtn: '在PancakeSwap购买',
-        gameDesc: '让你的火箭安全着陆在平台上！',
-        scoreLabel: '分数',
-        levelLabel: '等级',
-        bestLabel: '最佳',
-        howToPlayTitle: '📖 如何玩',
-        leaderTitle: '🏆 排行榜',
-        startBtn: '开始游戏',
-        resetBtn: '重置',
-        closeBtn: '关闭'
-      },
-      es: {
-        subtitle: '¡Donde la cultura meme se encuentra con blockchain transparente — Juega, gana recompensas y únete a la comunidad! 🚀',
-        playBtn: 'JUGAR MOON LANDER',
-        buyBtn: 'Comprar en PancakeSwap',
-        gameDesc: '¡Aterriza tu cohete de forma segura en la plataforma!',
-        scoreLabel: 'PUNTOS',
-        levelLabel: 'NIVEL',
-        bestLabel: 'MEJOR',
-        howToPlayTitle: '📖 CÓMO JUGAR',
-        leaderTitle: '🏆 TABLA DE CLASIFICACIÓN',
-        startBtn: 'COMENZAR JUEGO',
-        resetBtn: 'REINICIAR',
-        closeBtn: 'CERRAR'
-      },
-      fr: {
-        subtitle: 'Où la culture des mèmes rencontre la blockchain transparente — Jouez, gagnez des récompenses et rejoignez la communauté ! 🚀',
-        playBtn: 'JOUER À MOON LANDER',
-        buyBtn: 'Acheter sur PancakeSwap',
-        gameDesc: 'Fais atterrir ta fusée en toute sécurité sur la plateforme !',
-        scoreLabel: 'SCORE',
-        levelLabel: 'NIVEAU',
-        bestLabel: 'MEILLEUR',
-        howToPlayTitle: '📖 COMMENT JOUER',
-        leaderTitle: '🏆 CLASSEMENT',
-        startBtn: 'COMMENCER LE JEU',
-        resetBtn: 'RÉINITIALISER',
-        closeBtn: 'FERMER'
-      }
-    };
-
-    function changeLanguage(lang) {
-      const t = translations[lang] || translations.en;
-      Object.keys(t).forEach(key => {
-        const el = document.getElementById(key);
-        if(el) {
-          if(el.tagName === 'BUTTON' || el.tagName === 'SPAN') {
-            el.textContent = t[key];
-          } else {
-            el.textContent = t[key];
-          }
-        }
-      });
-    }
   </script>
 </body>
 </html>
