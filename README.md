@@ -1,25 +1,34 @@
 <p align="center">
-  <img src="https://i.postimg.cc/5y0H78jp/09DF90F9-3A8B-49B3-8A87-C2FFFF78C819.png" alt="4EverMeme Logo" width="200"/>
+  <img src="https://i.postimg.cc/5y0H78jp/09DF90F9-3A8B-49B3-8A87-C2FFFF78C819.png" alt="4EverMeme Logo" width="250"/>
 </p>
 
-<h1 align="center">4EverMeme (4EVM)</h1>
+<h1 align="center">🚀 4EverMeme (4EVM) 🚀</h1>
 
 <p align="center">
-  <strong>Where Memes Meet Blockchain 🚀</strong>
+  <strong>Where Memes Meet Blockchain</strong>
+</p>
+
+<p align="center">
+  <a href="https://4evermeme.github.io/4EverMeme/">
+    <img src="https://img.shields.io/badge/🌐_Website-4EverMeme-gold?style=for-the-badge" alt="Website"/>
+  </a>
 </p>
 
 <p align="center">
   <a href="https://bscscan.com/token/0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef">
-    <img src="https://img.shields.io/badge/Verified%20on-BscScan-brightgreen?logo=binance" alt="Verified on BscScan"/>
-  </a>
-  <a href="https://github.com/nedja80/4EverMeme">
-    <img src="https://img.shields.io/badge/GitHub-Repository-blue?logo=github" alt="GitHub"/>
-  </a>
-  <a href="mailto:4evermeme.official@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact%20Us-red?logo=gmail" alt="Email"/>
+    <img src="https://img.shields.io/badge/✓_Verified-BscScan-brightgreen?style=for-the-badge&logo=binance" alt="Verified on BscScan"/>
   </a>
   <a href="https://pancakeswap.finance/swap?outputCurrency=0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef&chain=bsc">
-    <img src="https://img.shields.io/badge/Buy%20on-PancakeSwap-orange?logo=pancakeswap" alt="PancakeSwap"/>
+    <img src="https://img.shields.io/badge/🥞_Buy_on-PancakeSwap-orange?style=for-the-badge" alt="PancakeSwap"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/nedja80/4EverMeme">
+    <img src="https://img.shields.io/badge/💻_GitHub-Repository-blue?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
+  <a href="mailto:4evermeme.official@gmail.com">
+    <img src="https://img.shields.io/badge/📧_Email-Contact_Us-red?style=for-the-badge&logo=gmail" alt="Email"/>
   </a>
 </p>
 
@@ -58,11 +67,21 @@
 
 | Platform | Link |
 |----------|------|
-| 🌐 **Website** |(https://4evermeme.github.io/4EverMeme/)|
+| 🌐 **Website** | https://4evermeme.github.io/4EverMeme/ |
 | 📧 **Email** | 4evermeme.official@gmail.com |
 | 💻 **GitHub** | https://github.com/nedja80/4EverMeme |
 | 🔍 **BscScan** | [View Contract](https://bscscan.com/token/0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef) |
 | 🥞 **PancakeSwap** | [Buy 4EVM](https://pancakeswap.finance/swap?outputCurrency=0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef&chain=bsc) |
+
+---
+
+## 👤 Project Contact
+
+| Info | Details |
+|------|---------|
+| **Developer** | Nedja80 |
+| **Email** | 4evermeme.official@gmail.com |
+| **GitHub** | [@nedja80](https://github.com/nedja80) |
 
 ---
 
@@ -186,7 +205,7 @@ Submit a pull request or [open an issue](https://github.com/nedja80/4EverMeme/is
 |---------|------|
 | 📧 **Email** | 4evermeme.official@gmail.com |
 | 💻 **GitHub Issues** | [Open an issue](https://github.com/nedja80/4EverMeme/issues) |
-| 🌐 **Website** |(https://4evermeme.github.io/4EverMeme/)|
+| 🌐 **Website** | https://4evermeme.github.io/4EverMeme/ |
 
 ---
 
