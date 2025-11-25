@@ -15,11 +15,8 @@
   <a href="https://github.com/nedja80/4EverMeme">
     <img src="https://img.shields.io/badge/GitHub-Repository-blue?logo=github" alt="GitHub"/>
   </a>
-  <a href="https://t.me/4evermeme">
-    <img src="https://img.shields.io/badge/Telegram-Join%20Us-26A5E4?logo=telegram" alt="Telegram"/>
-  </a>
-  <a href="https://x.com/4evermeme">
-    <img src="https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=x" alt="Twitter"/>
+  <a href="mailto:4evermeme.official@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-red?logo=gmail" alt="Email"/>
   </a>
 </p>
 
@@ -33,6 +30,7 @@
 
 - **Community-First**: Built by the community, for the community
 - **Transparent**: Fully verified smart contract on BscScan
+- **Zero Tax**: 0% buy/sell tax - 100% community owned
 - **Creative Hub**: A platform for meme enthusiasts, artists, and crypto users
 - **Decentralized Entertainment**: Bringing fun and innovation to the blockchain space
 
@@ -48,19 +46,28 @@
 | **Decimals** | 18 |
 | **Total Supply** | 1,000,000,000 4EVM |
 | **Contract Address** | `0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef` |
-| **Contract Status** | ✅ Verified on BscScan |
+| **Contract Status** | ✅ Similar Match Verified on BscScan |
+| **Tax** | 0% Buy / 0% Sell |
 
 ---
 
 ## 🔗 Official Links
 
-Stay connected with the 4EverMeme community:
+Stay connected with the 4EverMeme project:
 
-- 🌐 **Website**: https://Nedja80.github.io/4EverMeme/
-- 💬 **Telegram**: [Join our community](https://t.me/4evermeme)
-- 🐦 **Twitter/X**: [@4evermeme](https://x.com/4evermeme)
+- 🌐 **Website**: https://nedja80.github.io/4EverMeme/
+- 📧 **Email**: 4evermeme.official@gmail.com
 - 💻 **GitHub**: [4EverMeme Repository](https://github.com/nedja80/4EverMeme)
 - 🔍 **BscScan**: [View Contract](https://bscscan.com/token/0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef)
+- 🥞 **PancakeSwap**: [Buy 4EVM](https://pancakeswap.finance/swap?outputCurrency=0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef&chain=bsc)
+
+---
+
+## 👤 Project Contact
+
+- **Developer**: Nedja80
+- **Email**: 4evermeme.official@gmail.com
+- **GitHub**: [@nedja80](https://github.com/nedja80)
 
 ---
 
@@ -72,6 +79,14 @@ The 4EverMeme smart contract is fully verified and follows the BEP-20 standard. 
 - ✅ Balance queries
 - ✅ Approval mechanisms
 - ✅ Allowance management
+- ✅ No hidden functions
+- ✅ 0% tax on all transactions
+
+### Contract Security
+
+- **Similar Match Verified**: Contract bytecode matches verified source code
+- **Reference Contract**: [0xb175EE11731D1800977F074945fa327D1Fdf6148](https://bscscan.com/address/0xb175EE11731D1800977F074945fa327D1Fdf6148#code)
+- **Open Source**: Full code available on GitHub and BscScan
 
 ### View Contract Source Code
 
@@ -94,29 +109,36 @@ You can review the complete verified source code on BscScan:
 
 ### Buying 4EVM
 
-More information on how to purchase 4EVM tokens will be available soon. Stay tuned to our official channels!
+You can purchase 4EVM tokens on PancakeSwap:
+
+1. Visit [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xDE008b6e97ad5D05D4f49D3949E91E165f3092Ef&chain=bsc)
+2. Connect your BEP-20 wallet
+3. Swap BNB for 4EVM
+4. Confirm the transaction
 
 ---
 
 ## 🎨 Vision & Roadmap
 
-### Phase 1: Foundation (Current)
+### Phase 1: Foundation ✅ (Current)
 - ✅ Token deployment and verification
-- ✅ Community building on Telegram and Twitter
 - ✅ GitHub repository establishment
 - ✅ Website launched
+- ✅ Official email established
+- ✅ BscScan listing request submitted
 
-### Phase 2: Growth
-- 📱 Enhanced social media presence
+### Phase 2: Growth 🚧 (In Progress)
+- 📱 Social media presence expansion
 - 🎨 Meme contests and community events
 - 🤝 Strategic partnerships
-- 📈 Exchange listings
+- 📈 DEX and CEX listings
+- 🎮 Interactive games on website
 
-### Phase 3: Expansion
+### Phase 3: Expansion 🔮 (Future)
 - 🌐 Full platform launch
-- 🎮 Gamification features
+- 🎮 Advanced gamification features
 - 🎁 Community rewards program
-- 🔧 Additional utilities
+- 🔧 Additional utilities and use cases
 
 ---
 
@@ -125,11 +147,30 @@ More information on how to purchase 4EVM tokens will be available soon. Stay tun
 4EverMeme thrives on community participation. We encourage all holders and enthusiasts to:
 
 - Share your best memes
-- Participate in community discussions
+- Participate in project discussions
 - Propose new ideas and initiatives
 - Help spread the word about 4EVM
+- Contribute to the codebase
 
-Join our growing community and be part of the meme revolution!
+**Community Building**: We are actively building our community. Social channels will be announced soon!
+
+---
+
+## 🔒 Security & Transparency
+
+### Token Security Features
+
+- **No Ownership**: Contract has no owner functions
+- **No Mint Function**: Fixed supply, no new tokens can be created
+- **No Blacklist**: All addresses can freely trade
+- **0% Tax**: No hidden fees on transactions
+- **Transparent**: All code is open source and verified
+
+### Audit Status
+
+- **Similar Match Verified**: Bytecode verified on BscScan
+- **Open Source**: Full transparency on GitHub
+- **Community Project**: No team allocation or hidden wallets
 
 ---
 
@@ -143,12 +184,13 @@ This project is community-driven and experimental in nature. Cryptocurrency inve
 - **No Financial Advice**: Nothing in this repository constitutes financial advice
 - **Risk Awareness**: Be aware of the volatility and risks associated with cryptocurrency
 - **Community Project**: This is a community initiative with no guarantees of returns
+- **Experimental**: This is a meme token created for entertainment and community building
 
 ---
 
 ## 📄 License
 
-This project is open source. Please review the license file for more details.
+This project is open source under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -160,8 +202,19 @@ We welcome contributions from the community! Whether it's:
 - Documentation updates
 - Creative content
 - Bug reports
+- Feature suggestions
 
 Feel free to submit a pull request or open an issue on GitHub.
+
+---
+
+## 📞 Contact & Support
+
+For questions, suggestions, or partnership inquiries:
+
+- 📧 Email: 4evermeme.official@gmail.com
+- 💻 GitHub Issues: [Open an issue](https://github.com/nedja80/4EverMeme/issues)
+- 🌐 Website: https://nedja80.github.io/4EverMeme/
 
 ---
 
